@@ -1,23 +1,21 @@
 
 document.querySelector('button').addEventListener('click', function (event) {
-    // creatNewListItem();
     let inputBox = document.getElementById('item');
     let li = creatNewListItem(inputBox.value);
     document.querySelector('ul').appendChild(li);
+
+     inputBox.value='';
+
 });
-
-
-
-
-
-document.getElementById('item').addEventListener('keyup', function (event){
-    if(event.key === 'Enter' ){
+document.getElementById('item').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
         let inputBox = document.getElementById('item');
-    let li = creatNewListItem(inputBox.value);
-    document.querySelector('ul').appendChild(li);
+        let li = creatNewListItem(inputBox.value);
+        document.querySelector('ul').appendChild(li);
+
+
     }
 });
-
 function creatNewListItem(itemName) {
 
     let element = document.createElement('li');
@@ -31,13 +29,12 @@ function creatNewListItem(itemName) {
     click.innerText = "Delete";
 
     click.addEventListener('click', function (event) {
-       element.remove();
+        element.remove();
     });
-        
-        element.appendChild(span);
+
+    element.appendChild(span);
     element.appendChild(space);
     element.appendChild(click);
 
     return element;
-
 }
