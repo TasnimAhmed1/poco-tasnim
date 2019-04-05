@@ -1,21 +1,25 @@
+let inputBox = document.getElementById('item');
+let shoppinglist = document.querySelector('ul')
 
 document.querySelector('button').addEventListener('click', function (event) {
-    let inputBox = document.getElementById('item');
+    if(inputBox.value.trim() !== ''){
     let li = creatNewListItem(inputBox.value);
-    document.querySelector('ul').appendChild(li);
-
-     inputBox.value='';
-
+    shoppinglist.appendChild(li);
+    inputBox.value = '';
+    }
+    inputBox.focus();
 });
 document.getElementById('item').addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
-        let inputBox = document.getElementById('item');
+        if(inputBox.value.trim() !== ''){
         let li = creatNewListItem(inputBox.value);
-        document.querySelector('ul').appendChild(li);
-
-
+        shoppinglist.appendChild(li);
+        inputBox.value = '';
+        }
     }
-});
+});     
+inputBox.focus();
+
 function creatNewListItem(itemName) {
 
     let element = document.createElement('li');
@@ -35,6 +39,5 @@ function creatNewListItem(itemName) {
     element.appendChild(span);
     element.appendChild(space);
     element.appendChild(click);
-
     return element;
 }
