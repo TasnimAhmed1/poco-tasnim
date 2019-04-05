@@ -5,26 +5,43 @@ const button = document.querySelector('button');
 button.disabled = true;
 
 button.addEventListener('click', function (event) {
-    if (inputBox.value.trim() !== '') {
-        button.disabled = false;
-        const li = creatNewListItem(inputBox.value);
-        shoppinglist.appendChild(li);
-        inputBox.value = '';
-        button.disabled = true
+
+    const trimmedvalue = inputBox.value.trim();
+
+    if (trimmedvalue === '') {
+        return;
     }
+
+    const li = creatNewListItem(inputBox.value);
+    shoppinglist.appendChild(li);
+    inputBox.value = '';
+    button.disabled = true;
     inputBox.focus();
 });
 inputBox.addEventListener('keyup', function (event) {
-    if (inputBox.value.trim() !== '') {
-        button.disabled = false;
-        if (event.key === 'Enter') {
-            const li = creatNewListItem(inputBox.value);
-            shoppinglist.appendChild(li);
-            inputBox.value = '';
-            button.disabled = true
-        }
+    const trimmedvalue = inputBox.value.trim();
+    button.disabled = trimmedvalue === '';
+    // if (trimmedvalue !== '') {
+    //     if (event.key === 'Enter') {
+    //         const li = creatNewListItem(trimmedvalue);
+    //         shoppinglist.appendChild(li);
+    //         inputBox.value = '';
+    //     }
+    // }
+    // button.disabled = trimmedvalue ==='';
+
+    if (trimmedvalue === '') {
+        return;
     }
+    if (event.key !== 'Enter') {
+        return;
+    }
+    const li = creatNewListItem(trimmedvalue);
+    shoppinglist.appendChild(li);
+    inputBox.value = '';
+    button.disabled = true;
 });
+
 inputBox.focus();
 
 function creatNewListItem(itemName) {
