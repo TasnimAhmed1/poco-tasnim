@@ -21,6 +21,7 @@ button.addEventListener('click', function (event) {
 inputBox.addEventListener('keyup', function (event) {
     const trimmedvalue = inputBox.value.trim();
     button.disabled = trimmedvalue === '';
+
     // if (trimmedvalue !== '') {
     //     if (event.key === 'Enter') {
     //         const li = creatNewListItem(trimmedvalue);
@@ -44,6 +45,12 @@ inputBox.addEventListener('keyup', function (event) {
 
 inputBox.focus();
 
+/**
+ * Creates and returns an 'li' element for inclusion in the shopping list.
+ * @param {string} itemName Name of the item to add to the list
+ * @returns {HTMLElement} li element
+ */
+
 function creatNewListItem(itemName) {
 
     const element = document.createElement('li');
@@ -60,8 +67,16 @@ function creatNewListItem(itemName) {
         element.remove();
     });
 
+
     element.appendChild(span);
     element.appendChild(space);
     element.appendChild(click);
     return element;
 }
+
+document.getElementById('clear').addEventListener('click', function (event) {
+    let li = document.querySelectorAll('li');
+    li.forEach(function (li) {
+        li.remove();
+    });
+});
