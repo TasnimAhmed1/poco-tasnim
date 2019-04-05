@@ -1,0 +1,79 @@
+body {
+  background-color: #f1f1f1;
+}
+
+h1 {
+  color: rgb(196, 91, 91);
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+h3 {
+  color: rgb(45, 116, 116);
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/*p {
+  padding: .2em .5em;
+  border-style: dashed;
+} */
+#imgs p {
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  margin-bottom:0;
+  padding:1em;
+  box-sizing: border-box;
+  text-align: center;
+
+
+}
+
+#imgs, #details {
+  display: inline-block;
+  width: 40%;
+}
+
+#imgs {
+  margin-right: 2em;
+  position: relative;
+}
+
+.icon {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul.breadcrumb {
+  padding-left: 0;
+  background-color: lightgrey;
+}
+
+ul.breadcrumb li {
+  display: inline;
+}
+
+ul.breadcrumb li::before {
+  content: " > ";
+}
+
+ul.breadcrumb li:first-child::before {
+  content: "";
+}

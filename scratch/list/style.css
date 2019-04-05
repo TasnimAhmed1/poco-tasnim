@@ -1,0 +1,35 @@
+.container{
+    /* height: 100px; */
+   
+    margin-bottom:3em;
+    display:flex;
+    flex-direction: column;
+    transition: linear 1s background-color;
+    width:100%
+    
+}
+.item {
+    margin: 10px;
+    /* border: 1px solid gray; */
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.3); 
+    flex-direction: row;
+    display:flex;
+    border-radius: 6px;
+
+    
+  }
+.pic {
+    margin: 10px;
+    /* border: 1px  solid gray; */
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+    display:flex;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin:1em;
+  }
+.text{
+    flex-grow:1;
+}
+  

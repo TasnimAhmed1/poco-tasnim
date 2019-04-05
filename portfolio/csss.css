@@ -1,0 +1,18 @@
+
+h1{
+    color: rgb(211, 109, 25);
+    font-family: 'Fjalla One', sans-serif;
+  }
+h3, .headline {
+    color:rgb(45, 116, 116);
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Slabo 27px', serif;
+}
+
+body {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+img{
+    float: right;
+}

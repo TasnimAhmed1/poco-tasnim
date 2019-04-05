@@ -1,4 +1,34 @@
-p#footer {
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Oswald|ZCOOL+XiaoWei');
+
+body{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'ZCOOL XiaoWei', serif;}
+
+p.warning {
+    background-color: maroon;
+    color: white;
+    font-style: bold;
+    padding: .5em 1em;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Oswald', sans-serif;
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'VT323', monospace;
+  }
+  
+  p.warning::before {
+    content: "WARNING!: "
+  }
+  
+  p em {
+    font-style: normal;
+    text-decoration: underline;
+  }
+  
+  p#footer {
     border-top: 1px solid black;
     background-color: white;
     padding-top: .5em;
@@ -6,8 +36,16 @@ p#footer {
   }
   
   p {
-    color: red;
+    color: rgb(185, 61, 244, .67); /*alpha_value 0:1 */
     background-color: lightgrey;
     margin-left: 1em;
     margin-right: 1em;
   }
+
+.important {
+    color :blue ;
+    font-weight: bold ;
+}
+
+h1{font-family: 'Oswald', sans-serif;
+}
