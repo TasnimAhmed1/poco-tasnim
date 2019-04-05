@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Javascript Test</title>
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <h1 id="myheading">hello powercoders!</h1>
+    <div id="main"></div>
+    <button onclick="test()">test</button>
+   
+
+
+    <script>
+      
+      function test (){
+        let mainElement = document.getElementById('main');
+        let newElement = document.createElement('div');
+        newElement.className='new-item';
+        newElement.textContent='New Item';
+        mainElement.appendChild(newElement);
+
+       
+      }
+    </script>
+</body>
+
+</html>
