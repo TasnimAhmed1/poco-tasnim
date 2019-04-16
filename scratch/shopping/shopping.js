@@ -79,4 +79,4 @@ document.getElementById('clear').addEventListener('click', function (event) {
     li.forEach(function (li) {
         li.remove();
     });
-});
+}); 

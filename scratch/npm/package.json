@@ -1,0 +1,9 @@
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "say-hello": "echo 'Hello Word'",
+    "awesome-npm":"npm run say-hello && echo 'echo NPM is awesome!'"
+  }
+}

@@ -17,18 +17,29 @@ function createItems(films) {
         cardContainer.innerHTML += createCard(film);
     });
 }
-function getFilms() {
-    fetch(apiUrl).then(function (response) {
-        response.json()
-        .then(function(data){
-            createItems(data);
-        });
 
-    })
-        .catch(function (reason) {
-            console.log('Eror', reason);
-        });
+async function getFilms(){
+    try{
+        let response =await fetch(apiUrl)
+        let data = await response.json();
+        createItems(data);
+    }
+    catch(e){
+        console.log(e);
+    }
 }
+// function getFilms() {
+//     fetch(apiUrl).then(function (response) {
+//         response.json()
+//             .then(function (data) {
+//                 createItems(data);
+//             });
+
+//     })
+//         .catch(function (reason) {
+//             console.log('Eror', reason);
+//         });
+// }
 
 // function getFilms() {
 //     let xhr = new XMLHttpRequest();
@@ -43,3 +54,14 @@ function getFilms() {
 // }
 
 getFilms();
+
+// setTimeout(function(){
+//     console.log('SetTimeOut is called');
+//     alert('Hello')
+// });
+
+// setInterval(() => {
+
+//     console.log('Hello');
+    
+// }, 1000);
